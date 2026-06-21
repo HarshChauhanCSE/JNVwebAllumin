@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jobs & Internships | JNV Chhotaudepur Alumni Network</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+<img src="images/jnv-logo.png" alt="">
+<span>JNV Alumni</span>
+</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="alumni.html">Alumni</a></li>
+<li><a href="achievements.html">Achievements</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="jobs.html">Jobs</a></li>
+<li><a href="mentorship.html">Mentorship</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Career & Opportunity Portal</h1>
+
+<p>
+Jobs, internships, referrals and career opportunities
+shared by JNV Chhotaudepur alumni.
+</p>
+
+</div>
+
+</section>
+
+<!-- Search -->
+
+<section class="featured">
+
+<h2>Find Opportunities</h2>
+
+<input
+type="text"
+id="jobSearch"
+placeholder="Search Jobs, Companies, Skills"
+style="
+width:100%;
+max-width:600px;
+padding:15px;
+border-radius:12px;
+border:1px solid #ddd;
+display:block;
+margin:auto;">
+
+</section>
+
+<!-- Jobs -->
+
+<section class="featured">
+
+<h2>Latest Opportunities</h2>
+
+<div class="cards" id="jobContainer">
+
+<div class="card job-card">
+<h3>Frontend Developer Intern</h3>
+<p>Tech Company</p>
+<p>Remote Internship</p>
+<button class="btn-primary">Apply</button>
+</div>
+
+<div class="card job-card">
+<h3>Cyber Security Analyst</h3>
+<p>Security Firm</p>
+<p>Full Time</p>
+<button class="btn-primary">Apply</button>
+</div>
+
+<div class="card job-card">
+<h3>Software Engineer</h3>
+<p>Product Company</p>
+<p>Hybrid</p>
+<button class="btn-primary">Apply</button>
+</div>
+
+<div class="card job-card">
+<h3>Data Analyst</h3>
+<p>Analytics Company</p>
+<p>Remote</p>
+<button class="btn-primary">Apply</button>
+</div>
+
+</div>
+
+</section>
+
+<!-- Referrals -->
+
+<section class="featured">
+
+<h2>Alumni Referrals</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Referral Program</h3>
+<p>
+Alumni can refer talented students and graduates.
+</p>
+</div>
+
+<div class="card">
+<h3>Industry Connections</h3>
+<p>
+Connect with professionals across industries.
+</p>
+</div>
+
+<div class="card">
+<h3>Career Guidance</h3>
+<p>
+Get support for interviews and career growth.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Internship Programs -->
+
+<section class="featured">
+
+<h2>Internship Programs</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Web Development</h3>
+<p>Frontend & Backend Internship</p>
+</div>
+
+<div class="card">
+<h3>Cyber Security</h3>
+<p>Security Research & Pentesting</p>
+</div>
+
+<div class="card">
+<h3>Artificial Intelligence</h3>
+<p>Machine Learning & Data Science</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+<p>© 2026 JNV Chhotaudepur Alumni Network</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+
+const searchJob =
+document.getElementById("jobSearch");
+
+const jobs =
+document.querySelectorAll(".job-card");
+
+searchJob.addEventListener("keyup",()=>{
+
+const value =
+searchJob.value.toLowerCase();
+
+jobs.forEach(job=>{
+
+const text =
+job.innerText.toLowerCase();
+
+if(text.includes(value)){
+job.style.display="block";
+}
+else{
+job.style.display="none";
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

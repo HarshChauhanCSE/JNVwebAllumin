@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alumni Directory | JNV Chhotaudepur</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+<div class="logo">
+<img src="images/jnv-logo.png" alt="JNV Logo">
+<span>JNV Alumni</span>
+</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="alumni.html">Alumni</a></li>
+<li><a href="achievements.html">Achievements</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Alumni Directory</h1>
+
+<p>
+Connect with former students, professionals,
+entrepreneurs, officers and achievers of
+JNV Chhotaudepur.
+</p>
+
+</div>
+
+</section>
+
+<!-- Search -->
+
+<section class="featured">
+
+<h2>Find Alumni</h2>
+
+<div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;">
+
+<input
+type="text"
+id="searchAlumni"
+placeholder="Search by Name or Profession"
+style="padding:15px;width:320px;border-radius:12px;border:1px solid #ddd;">
+
+<select
+id="batchFilter"
+style="padding:15px;border-radius:12px;border:1px solid #ddd;">
+
+<option value="all">All Batches</option>
+<option value="2026">2026</option>
+<option value="2027">2027</option>
+<option value="2028">2028</option>
+<option value="2029">2029</option>
+<option value="2030">2030</option>
+
+</select>
+
+</div>
+
+</section>
+
+<!-- Alumni Cards -->
+
+<section class="featured">
+
+<h2>Featured Alumni</h2>
+
+<div class="cards" id="alumniContainer">
+
+<div class="card alumni-card" data-batch="2026">
+
+<img src="images/alumni1.jpg" alt="">
+
+<h3>Comming soon</h3>
+
+<p>Comming soon</p>
+
+<p>Batch 2026</p>
+
+<button class="btn-primary alumni-btn">
+View Profile
+</button>
+
+</div>
+
+<div class="card alumni-card" data-batch="2027">
+
+<img src="images/alumni2.jpg" alt="">
+
+<h3>Comming soon</h3>
+
+<p>Comming soon</p>
+
+<p>Batch 2026</p>
+
+<button class="btn-primary alumni-btn">
+View Profile
+</button>
+
+</div>
+
+<div class="card alumni-card" data-batch="2028">
+
+<img src="images/alumni3.jpg" alt="">
+
+<h3>Comming soon</h3>
+
+<p>Comming soon</p>
+
+<p>Batch 2026</p>
+
+<button class="btn-primary alumni-btn">
+View Profile
+</button>
+
+</div>
+
+<div class="card alumni-card" data-batch="2029">
+
+<img src="images/alumni4.jpg" alt="">
+
+<h3>Comming soon</h3>
+
+<p>Comming soon</p>
+
+<p>Batch 2026</p>
+
+<button class="btn-primary alumni-btn">
+View Profile
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Categories -->
+
+<section class="featured">
+
+<h2>Alumni Categories</h2>
+
+<div class="cards">
+
+<div class="card">
+<i class="fa-solid fa-laptop-code fa-3x"></i>
+<h3>Technology</h3>
+<p>Software Engineers & IT Professionals</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-user-doctor fa-3x"></i>
+<h3>Healthcare</h3>
+<p>Doctors & Medical Experts</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-landmark fa-3x"></i>
+<h3>Government</h3>
+<p>Civil Services & Officers</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-briefcase fa-3x"></i>
+<h3>Business</h3>
+<p>Entrepreneurs & Founders</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Hall of Fame -->
+
+<section class="featured">
+
+<h2>Hall of Fame</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Outstanding Achievement</h3>
+<p>National Level Recognition</p>
+</div>
+
+<div class="card">
+<h3>Innovation Award</h3>
+<p>Research & Development Excellence</p>
+</div>
+
+<div class="card">
+<h3>Leadership Award</h3>
+<p>Exceptional Contribution To Society</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Alumni Profile Modal -->
+
+<div id="profileModal"
+style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.7);
+z-index:9999;">
+
+<div
+style="
+background:white;
+max-width:600px;
+margin:80px auto;
+padding:30px;
+border-radius:20px;
+text-align:center;">
+
+<h2>Alumni Profile</h2>
+
+<p>
+Detailed profile information will appear here.
+Future version can connect with Firebase database.
+</p>
+
+<button id="closeModal"
+class="btn-primary">
+Close </button>
+
+</div>
+
+</div>
+
+<!-- Footer -->
+
+<footer>
+
+<p>
+© 2026 JNV Chhotaudepur Alumni Network
+</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+
+const searchInput =
+document.getElementById("searchAlumni");
+
+const batchFilter =
+document.getElementById("batchFilter");
+
+const alumniCards =
+document.querySelectorAll(".alumni-card");
+
+function filterAlumni(){
+
+const searchValue =
+searchInput.value.toLowerCase();
+
+const batchValue =
+batchFilter.value;
+
+alumniCards.forEach(card=>{
+
+const text =
+card.innerText.toLowerCase();
+
+const batch =
+card.dataset.batch;
+
+const searchMatch =
+text.includes(searchValue);
+
+const batchMatch =
+batchValue === "all" ||
+batch === batchValue;
+
+card.style.display =
+(searchMatch && batchMatch)
+? "block" : "none";
+
+});
+
+}
+
+searchInput.addEventListener(
+"keyup",
+filterAlumni
+);
+
+batchFilter.addEventListener(
+"change",
+filterAlumni
+);
+
+const modal =
+document.getElementById("profileModal");
+
+document.querySelectorAll(".alumni-btn")
+.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+modal.style.display="block";
+
+});
+
+});
+
+document.getElementById("closeModal")
+.addEventListener("click",()=>{
+
+modal.style.display="none";
+
+});
+
+</script>
+
+</body>
+</html>
