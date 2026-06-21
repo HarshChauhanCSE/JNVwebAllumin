@@ -546,10 +546,3 @@ object-fit:contain;
     }
 }
 
-.menu-btn{
-display:block !important;
-font-size:30px !important;
-color:red !important;
-background:yellow !important;
-border:2px solid black !important;
-}
