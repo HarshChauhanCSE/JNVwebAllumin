@@ -514,11 +514,13 @@ object-fit:contain;
 }
 .menu-btn{
 display:none;
+background:none;
+border:none;
 font-size:28px;
 cursor:pointer;
-border:none;
-background:none;
+color:#0f4c81;
 }
+
 
 @media(max-width:768px){
 
@@ -545,12 +547,13 @@ display:flex;
 
 .menu-btn{
 display:none;
+background:none;
+border:none;
 font-size:28px;
 cursor:pointer;
-border:none;
-background:none;
-color:var(--primary);
+color:#0f4c81;
 }
+
 
 .logo img{
 width:45px;
