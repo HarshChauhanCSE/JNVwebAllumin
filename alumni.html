@@ -1,354 +1,378 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Directory | JNV Chhotaudepur Alumni Network</title>
 
-<title>Alumni Directory | JNV Chhotaudepur</title>
+    <link rel="stylesheet" href="css/style.css">
 
-<link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-<!-- Navbar -->
+    <!-- Navbar -->
 
-<nav class="navbar">
+    <nav class="navbar">
 
-<div class="logo">
-<img src="images/jnv-logo.png" alt="JNV Logo">
-<span>JNV Alumni</span>
-</div>
+        <div class="logo">
+            <img src="images/jnv-logo.png" alt="JNV Logo">
+            <span>JNV Alumni</span>
+        </div>
 
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="alumni.html">Alumni</a></li>
-<li><a href="achievements.html">Achievements</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="events.html">Events</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
 
-</nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="alumni.html" class="active">Alumni</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-<!-- Hero -->
+        <button id="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
 
-<section class="hero">
+    </nav>
 
-<div class="hero-content">
+    <!-- Hero Section -->
 
-<h1>Alumni Directory</h1>
+    <section class="hero">
 
-<p>
-Connect with former students, professionals,
-entrepreneurs, officers and achievers of
-JNV Chhotaudepur.
-</p>
+        <div class="hero-content">
 
-</div>
+            <h1>Alumni Directory</h1>
 
-</section>
+            <p>
+                Connect with former students, professionals,
+                entrepreneurs, officers and achievers of
+                JNV Chhotaudepur.
+            </p>
 
-<!-- Search -->
+        </div>
 
-<section class="featured">
+    </section>
 
-<h2>Find Alumni</h2>
+    <!-- Search Section -->
 
-<div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;">
+    <section class="featured">
 
-<input
-type="text"
-id="searchAlumni"
-placeholder="Search by Name or Profession"
-style="padding:15px;width:320px;border-radius:12px;border:1px solid #ddd;">
+        <h2>Find Alumni</h2>
 
-<select
-id="batchFilter"
-style="padding:15px;border-radius:12px;border:1px solid #ddd;">
+        <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;">
 
-<option value="all">All Batches</option>
-<option value="2026">2026</option>
-<option value="2027">2027</option>
-<option value="2028">2028</option>
-<option value="2029">2029</option>
-<option value="2030">2030</option>
+            <input
+                type="text"
+                id="searchAlumni"
+                placeholder="Search by Name or Profession"
+                style="padding:15px;width:320px;border-radius:12px;border:1px solid #ddd;">
 
-</select>
+            <select
+                id="batchFilter"
+                style="padding:15px;border-radius:12px;border:1px solid #ddd;">
 
-</div>
+                <option value="all">All Batches</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
 
-</section>
+            </select>
 
-<!-- Alumni Cards -->
+        </div>
 
-<section class="featured">
+    </section>
 
-<h2>Featured Alumni</h2>
+    <!-- Featured Alumni -->
 
-<div class="cards" id="alumniContainer">
+    <section class="featured">
 
-<div class="card alumni-card" data-batch="2026">
+        <h2>Featured Alumni</h2>
 
-<img src="images/alumni1.jpg" alt="">
+        <div class="cards" id="alumniContainer">
 
-<h3>Comming soon</h3>
+            <div class="card alumni-card" data-batch="2026">
 
-<p>Comming soon</p>
+                <img src="images/alumni1.jpg" alt="Alumni">
 
-<p>Batch 2026</p>
+                <h3>Coming Soon</h3>
 
-<button class="btn-primary alumni-btn">
-View Profile
-</button>
+                <p>Profile Coming Soon</p>
 
-</div>
+                <p>Batch 2026</p>
 
-<div class="card alumni-card" data-batch="2027">
+                <button class="btn-primary alumni-btn">
+                    View Profile
+                </button>
 
-<img src="images/alumni2.jpg" alt="">
+            </div>
 
-<h3>Comming soon</h3>
+            <div class="card alumni-card" data-batch="2027">
 
-<p>Comming soon</p>
+                <img src="images/alumni2.jpg" alt="Alumni">
 
-<p>Batch 2026</p>
+                <h3>Coming Soon</h3>
 
-<button class="btn-primary alumni-btn">
-View Profile
-</button>
+                <p>Profile Coming Soon</p>
 
-</div>
+                <p>Batch 2027</p>
 
-<div class="card alumni-card" data-batch="2028">
+                <button class="btn-primary alumni-btn">
+                    View Profile
+                </button>
 
-<img src="images/alumni3.jpg" alt="">
+            </div>
 
-<h3>Comming soon</h3>
+            <div class="card alumni-card" data-batch="2028">
 
-<p>Comming soon</p>
+                <img src="images/alumni3.jpg" alt="Alumni">
 
-<p>Batch 2026</p>
+                <h3>Coming Soon</h3>
 
-<button class="btn-primary alumni-btn">
-View Profile
-</button>
+                <p>Profile Coming Soon</p>
 
-</div>
+                <p>Batch 2028</p>
 
-<div class="card alumni-card" data-batch="2029">
+                <button class="btn-primary alumni-btn">
+                    View Profile
+                </button>
 
-<img src="images/alumni4.jpg" alt="">
+            </div>
 
-<h3>Comming soon</h3>
+            <div class="card alumni-card" data-batch="2029">
 
-<p>Comming soon</p>
+                <img src="images/alumni4.jpg" alt="Alumni">
 
-<p>Batch 2026</p>
+                <h3>Coming Soon</h3>
 
-<button class="btn-primary alumni-btn">
-View Profile
-</button>
+                <p>Profile Coming Soon</p>
 
-</div>
+                <p>Batch 2029</p>
 
-</div>
+                <button class="btn-primary alumni-btn">
+                    View Profile
+                </button>
 
-</section>
+            </div>
 
-<!-- Categories -->
+        </div>
 
-<section class="featured">
+    </section>
 
-<h2>Alumni Categories</h2>
+    <!-- Alumni Categories -->
 
-<div class="cards">
+    <section class="featured">
 
-<div class="card">
-<i class="fa-solid fa-laptop-code fa-3x"></i>
-<h3>Technology</h3>
-<p>Software Engineers & IT Professionals</p>
-</div>
+        <h2>Alumni Categories</h2>
 
-<div class="card">
-<i class="fa-solid fa-user-doctor fa-3x"></i>
-<h3>Healthcare</h3>
-<p>Doctors & Medical Experts</p>
-</div>
+        <div class="cards">
 
-<div class="card">
-<i class="fa-solid fa-landmark fa-3x"></i>
-<h3>Government</h3>
-<p>Civil Services & Officers</p>
-</div>
+            <div class="card">
+                <i class="fa-solid fa-laptop-code fa-3x"></i>
+                <h3>Technology</h3>
+                <p>Software Engineers & IT Professionals</p>
+            </div>
 
-<div class="card">
-<i class="fa-solid fa-briefcase fa-3x"></i>
-<h3>Business</h3>
-<p>Entrepreneurs & Founders</p>
-</div>
+            <div class="card">
+                <i class="fa-solid fa-user-doctor fa-3x"></i>
+                <h3>Healthcare</h3>
+                <p>Doctors & Medical Experts</p>
+            </div>
 
-</div>
+            <div class="card">
+                <i class="fa-solid fa-landmark fa-3x"></i>
+                <h3>Government</h3>
+                <p>Civil Services & Officers</p>
+            </div>
 
-</section>
+            <div class="card">
+                <i class="fa-solid fa-briefcase fa-3x"></i>
+                <h3>Business</h3>
+                <p>Entrepreneurs & Founders</p>
+            </div>
 
-<!-- Hall of Fame -->
+        </div>
 
-<section class="featured">
+    </section>
+    <!-- Hall of Fame -->
 
-<h2>Hall of Fame</h2>
+    <section class="featured">
 
-<div class="cards">
+        <h2>Hall of Fame</h2>
 
-<div class="card">
-<h3>Outstanding Achievement</h3>
-<p>National Level Recognition</p>
-</div>
+        <div class="cards">
 
-<div class="card">
-<h3>Innovation Award</h3>
-<p>Research & Development Excellence</p>
-</div>
+            <div class="card">
+                <h3>Outstanding Achievement</h3>
+                <p>National Level Recognition</p>
+            </div>
 
-<div class="card">
-<h3>Leadership Award</h3>
-<p>Exceptional Contribution To Society</p>
-</div>
+            <div class="card">
+                <h3>Innovation Award</h3>
+                <p>Research & Development Excellence</p>
+            </div>
 
-</div>
+            <div class="card">
+                <h3>Leadership Award</h3>
+                <p>Exceptional Contribution to Society</p>
+            </div>
 
-</section>
+        </div>
 
-<!-- Alumni Profile Modal -->
+    </section>
 
-<div id="profileModal"
-style="
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.7);
-z-index:9999;">
+    <!-- Alumni Profile Modal -->
 
-<div
-style="
-background:white;
-max-width:600px;
-margin:80px auto;
-padding:30px;
-border-radius:20px;
-text-align:center;">
+    <div id="profileModal"
+        style="
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,.7);
+        z-index:9999;">
 
-<h2>Alumni Profile</h2>
+        <div
+            style="
+            background:white;
+            max-width:600px;
+            margin:80px auto;
+            padding:30px;
+            border-radius:20px;
+            text-align:center;">
 
-<p>
-Detailed profile information will appear here.
-Future version can connect with Firebase database.
-</p>
+            <h2>Alumni Profile</h2>
 
-<button id="closeModal"
-class="btn-primary">
-Close </button>
+            <p>
+                Detailed profile information will appear here.
+                Future versions can be connected with Firebase
+                and a real alumni database.
+            </p>
 
-</div>
+            <button id="closeModal" class="btn-primary">
+                Close
+            </button>
 
-</div>
+        </div>
 
-<!-- Footer -->
+    </div>
 
-<footer>
+    <!-- WhatsApp Button -->
 
-<p>
-© 2026 JNV Chhotaudepur Alumni Network
-</p>
+    <a
+        href="https://wa.me/6356543488"
+        class="whatsapp-btn"
+        target="_blank">
 
-</footer>
+        <i class="fab fa-whatsapp"></i>
 
-<script src="js/script.js"></script>
+    </a>
 
-<script>
+    <!-- Footer -->
 
-const searchInput =
-document.getElementById("searchAlumni");
+    <footer>
 
-const batchFilter =
-document.getElementById("batchFilter");
+        <p>
+            © 2026 JNV Chhotaudepur Alumni Network
+        </p>
 
-const alumniCards =
-document.querySelectorAll(".alumni-card");
+    </footer>
 
-function filterAlumni(){
+    <!-- Main JS -->
 
-const searchValue =
-searchInput.value.toLowerCase();
+    <script src="js/script.js"></script>
 
-const batchValue =
-batchFilter.value;
+    <!-- Alumni Page JS -->
 
-alumniCards.forEach(card=>{
+    <script>
 
-const text =
-card.innerText.toLowerCase();
+        const searchInput = document.getElementById("searchAlumni");
+        const batchFilter = document.getElementById("batchFilter");
+        const alumniCards = document.querySelectorAll(".alumni-card");
 
-const batch =
-card.dataset.batch;
+        function filterAlumni() {
 
-const searchMatch =
-text.includes(searchValue);
+            const searchValue = searchInput.value.toLowerCase();
+            const batchValue = batchFilter.value;
 
-const batchMatch =
-batchValue === "all" ||
-batch === batchValue;
+            alumniCards.forEach(card => {
 
-card.style.display =
-(searchMatch && batchMatch)
-? "block" : "none";
+                const text = card.innerText.toLowerCase();
+                const batch = card.dataset.batch;
 
-});
+                const searchMatch =
+                    text.includes(searchValue);
 
-}
+                const batchMatch =
+                    batchValue === "all" ||
+                    batch === batchValue;
 
-searchInput.addEventListener(
-"keyup",
-filterAlumni
-);
+                card.style.display =
+                    (searchMatch && batchMatch)
+                        ? "block"
+                        : "none";
 
-batchFilter.addEventListener(
-"change",
-filterAlumni
-);
+            });
 
-const modal =
-document.getElementById("profileModal");
+        }
 
-document.querySelectorAll(".alumni-btn")
-.forEach(btn=>{
+        searchInput.addEventListener(
+            "keyup",
+            filterAlumni
+        );
 
-btn.addEventListener("click",()=>{
+        batchFilter.addEventListener(
+            "change",
+            filterAlumni
+        );
 
-modal.style.display="block";
+        const modal =
+            document.getElementById("profileModal");
 
-});
+        document.querySelectorAll(".alumni-btn")
+            .forEach(btn => {
 
-});
+                btn.addEventListener("click", () => {
 
-document.getElementById("closeModal")
-.addEventListener("click",()=>{
+                    modal.style.display = "block";
 
-modal.style.display="none";
+                });
 
-});
+            });
 
-</script>
+        document.getElementById("closeModal")
+            .addEventListener("click", () => {
+
+                modal.style.display = "none";
+
+            });
+
+        window.addEventListener("click", (e) => {
+
+            if (e.target === modal) {
+
+                modal.style.display = "none";
+
+            }
+
+        });
+
+    </script>
 
 </body>
+
 </html>

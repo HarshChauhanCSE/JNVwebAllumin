@@ -1,251 +1,245 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Achievements | JNV Chhotaudepur Alumni Network</title>
+    <title>Achievements | JNV Chhotaudepur Alumni Network</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-<!-- Navbar -->
+    <!-- Navbar -->
 
-<nav class="navbar">
+    <nav class="navbar">
 
-<div class="logo">
-<img src="images/jnv-logo.png" alt="JNV Logo">
-<span>JNV Alumni</span>
-</div>
+        <div class="logo">
+            <img src="images/jnv-logo.png" alt="JNV Logo">
+            <span>JNV Alumni</span>
+        </div>
 
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="alumni.html">Alumni</a></li>
-<li><a href="achievements.html">Achievements</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="events.html">Events</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
 
-</nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+            <li><a href="achievements.html" class="active">Achievements</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-<!-- Hero -->
+        <button id="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
 
-<section class="hero">
+    </nav>
 
-<div class="hero-content">
+    <!-- Hero -->
 
-<h1>Achievements & Hall of Fame</h1>
+    <section class="hero">
 
-<p>
-Celebrating excellence, leadership, innovation,
-and success of JNV Chhotaudepur students and alumni.
-</p>
+        <div class="hero-content">
 
-</div>
+            <h1>Achievements & Hall of Fame</h1>
 
-</section>
+            <p>
+                Celebrating excellence, leadership, innovation,
+                and success of JNV Chhotaudepur students and alumni.
+            </p>
 
-<!-- Achievement Stats -->
+        </div>
 
-<section class="stats">
+    </section>
 
-<div class="stat-card">
-<h2>0</h2>
-<p>Government Officers</p>
-</div>
+    <!-- Achievement Stats -->
 
-<div class="stat-card">
-<h2>0</h2>
-<p>Engineers</p>
-</div>
+    <section class="stats">
 
-<div class="stat-card">
-<h2>0</h2>
-<p>Doctors</p>
-</div>
+        <div class="stat-card">
+            <h2>0</h2>
+            <p>Government Officers</p>
+        </div>
 
-<div class="stat-card">
-<h2>0</h2>
-<p>Entrepreneurs</p>
-</div>
+        <div class="stat-card">
+            <h2>0</h2>
+            <p>Engineers</p>
+        </div>
 
-</section>
+        <div class="stat-card">
+            <h2>0</h2>
+            <p>Doctors</p>
+        </div>
 
-<!-- Hall of Fame -->
+        <div class="stat-card">
+            <h2>0</h2>
+            <p>Entrepreneurs</p>
+        </div>
 
-<section class="featured">
+    </section>
 
-<h2>Hall of Fame</h2>
+    <!-- Hall of Fame -->
 
-<div class="cards">
+    <section class="featured">
 
-<div class="card">
-<i class="fa-solid fa-award fa-3x"></i>
-<h3>UPSC Achievers</h3>
-<p>
------------
-</p>
-</div>
+        <h2>Hall of Fame</h2>
 
-<div class="card">
-<i class="fa-solid fa-building-columns fa-3x"></i>
-<h3>GPSC Officers</h3>
-<p>
------------
-</p>
-</div>
+        <div class="cards">
 
-<div class="card">
-<i class="fa-solid fa-graduation-cap fa-3x"></i>
-<h3>IIT & NIT Alumni</h3>
-<p>
------------
-</p>
-</div>
+            <div class="card">
+                <i class="fa-solid fa-award fa-3x"></i>
+                <h3>UPSC Achievers</h3>
+                <p>-----------</p>
+            </div>
 
-</div>
+            <div class="card">
+                <i class="fa-solid fa-building-columns fa-3x"></i>
+                <h3>GPSC Officers</h3>
+                <p>-----------</p>
+            </div>
 
-</section>
+            <div class="card">
+                <i class="fa-solid fa-graduation-cap fa-3x"></i>
+                <h3>IIT & NIT Alumni</h3>
+                <p>-----------</p>
+            </div>
 
-<!-- Academic Excellence -->
+        </div>
 
-<section class="featured">
+    </section>
 
-<h2>Academic Excellence</h2>
+    <!-- Academic Excellence -->
 
-<div class="cards">
+    <section class="featured">
 
-<div class="card">
-<h3>Board Examination Toppers</h3>
-<p>Consistently excellent academic performance.</p>
-</div>
+        <h2>Academic Excellence</h2>
 
-<div class="card">
-<h3>Scholarship Winners</h3>
-<p>National and state level scholarship achievers.</p>
-</div>
+        <div class="cards">
 
-<div class="card">
-<h3>Research Excellence</h3>
-<p>Students contributing to innovation and research.</p>
-</div>
+            <div class="card">
+                <h3>Board Examination Toppers</h3>
+                <p>Consistently excellent academic performance.</p>
+            </div>
 
-</div>
+            <div class="card">
+                <h3>Scholarship Winners</h3>
+                <p>National and state level scholarship achievers.</p>
+            </div>
 
-</section>
+            <div class="card">
+                <h3>Research Excellence</h3>
+                <p>Students contributing to innovation and research.</p>
+            </div>
 
-<!-- Sports Achievements -->
+        </div>
 
-<section class="featured">
+    </section>
 
-<h2>Sports Achievements</h2>
+    <!-- Sports Achievements -->
 
-<div class="cards">
+    <section class="featured">
 
-<div class="card">
-<i class="fa-solid fa-futbol fa-3x"></i>
-<h3>Football</h3>
-<p>National Level participation.</p>
-</div>
+        <h2>Sports Achievements</h2>
 
-<div class="card">
-<i class="fa-solid fa-volleyball fa-3x"></i>
-<h3>Volleyball</h3>
-<p>National level representation.</p>
-</div>
+        <div class="cards">
 
-<div class="card">
-<i class="fa-solid fa-medal fa-3x"></i>
-<h3>Athletics</h3>
-<p>Outstanding performance in competitions.</p>
-</div>
+            <div class="card">
+                <i class="fa-solid fa-futbol fa-3x"></i>
+                <h3>Football</h3>
+                <p>National Level participation.</p>
+            </div>
 
-</div>
+            <div class="card">
+                <i class="fa-solid fa-volleyball fa-3x"></i>
+                <h3>Volleyball</h3>
+                <p>National level representation.</p>
+            </div>
 
-</section>
+            <div class="card">
+                <i class="fa-solid fa-medal fa-3x"></i>
+                <h3>Athletics</h3>
+                <p>Outstanding performance in competitions.</p>
+            </div>
 
-<!-- Innovation -->
+        </div>
 
-<section class="featured">
+    </section>
 
-<h2>Innovation & Leadership</h2>
+    <!-- Innovation -->
 
-<div class="cards">
+    <section class="featured">
 
-<div class="card">
-<h3>Startups</h3>
-<p>
-Alumni-led businesses and innovative ventures.
-</p>
-</div>
+        <h2>Innovation & Leadership</h2>
 
-<div class="card">
-<h3>Technology</h3>
-<p>
-Contributions in software, cybersecurity and AI.
-</p>
-</div>
+        <div class="cards">
 
-<div class="card">
-<h3>Community Impact</h3>
-<p>
-Leadership initiatives creating positive change.
-</p>
-</div>
+            <div class="card">
+                <h3>Startups</h3>
+                <p>Alumni-led businesses and innovative ventures.</p>
+            </div>
 
-</div>
+            <div class="card">
+                <h3>Technology</h3>
+                <p>Contributions in software, cybersecurity and AI.</p>
+            </div>
 
-</section>
+            <div class="card">
+                <h3>Community Impact</h3>
+                <p>Leadership initiatives creating positive change.</p>
+            </div>
 
-<!-- Achievement Timeline -->
+        </div>
 
-<section class="featured">
+    </section>
 
-<h2>Journey of Excellence</h2>
+    <!-- Achievement Timeline -->
 
-<div class="cards">
+    <section class="featured">
 
-<div class="card">
-<h3>Foundation Years</h3>
-<p>Building strong educational values.</p>
-</div>
+        <h2>Journey of Excellence</h2>
 
-<div class="card">
-<h3>Growth Phase</h3>
-<p>Academic and extracurricular expansion.</p>
-</div>
+        <div class="cards">
 
-<div class="card">
-<h3>Global Recognition</h3>
-<p>Alumni impacting society worldwide.</p>
-</div>
+            <div class="card">
+                <h3>Foundation Years</h3>
+                <p>Building strong educational values.</p>
+            </div>
 
-</div>
+            <div class="card">
+                <h3>Growth Phase</h3>
+                <p>Academic and extracurricular expansion.</p>
+            </div>
 
-</section>
+            <div class="card">
+                <h3>Global Recognition</h3>
+                <p>Alumni impacting society worldwide.</p>
+            </div>
 
-<!-- Footer -->
+        </div>
 
-<footer>
+    </section>
 
-<p>
-© 2026 JNV Chhotaudepur Alumni Network
-</p>
+    <!-- Footer -->
 
-</footer>
+    <footer>
+        <p>© 2026 JNV Chhotaudepur Alumni Network</p>
+    </footer>
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
+```
