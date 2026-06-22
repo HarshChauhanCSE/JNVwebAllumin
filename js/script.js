@@ -1,263 +1,288 @@
-// =========================
-// ANIMATED COUNTERS
-// =========================
 
-const counters = document.querySelectorAll('.counter');
+document.addEventListener("DOMContentLoaded", () => {
 
-counters.forEach(counter => {
+    // =========================
+    // MOBILE MENU
+    // =========================
 
-```
-const updateCounter = () => {
+    window.toggleMenu = function () {
+        const navLinks = document.querySelector(".nav-links");
+        if (navLinks) {
+            navLinks.classList.toggle("active");
+        }
+    };
 
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            document.querySelector(".nav-links")?.classList.remove("active");
+        });
+    });
 
-    const increment = target / 100;
+    // =========================
+    // ANIMATED COUNTERS
+    // =========================
 
-    if(count < target){
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCounter, 20);
-    }else{
-        counter.innerText = target;
+    const counters = document.querySelectorAll(".counter");
+
+    counters.forEach(counter => {
+
+        const updateCounter = () => {
+
+            const target = parseInt(counter.dataset.target) || 0;
+            const count = parseInt(counter.innerText) || 0;
+            const increment = Math.ceil(target / 100);
+
+            if (count < target) {
+                counter.innerText = count + increment;
+                setTimeout(updateCounter, 20);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCounter();
+    });
+
+    // =========================
+    // DARK MODE
+    // =========================
+
+    const themeBtn = document.getElementById("theme-toggle");
+
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+
+        if (themeBtn) {
+            themeBtn.innerHTML =
+                '<i class="fa-solid fa-sun"></i>';
+        }
     }
 
-};
+    if (themeBtn) {
 
-updateCounter();
-```
+        themeBtn.addEventListener("click", () => {
 
-});
+            document.body.classList.toggle("dark-mode");
 
-// =========================
-// DARK / LIGHT MODE
-// =========================
+            const icon = themeBtn.querySelector("i");
 
-const themeBtn = document.getElementById('theme-toggle');
+            if (document.body.classList.contains("dark-mode")) {
 
-if(themeBtn){
+                icon?.classList.replace("fa-moon", "fa-sun");
+                localStorage.setItem("theme", "dark");
 
-themeBtn.addEventListener('click',()=>{
+            } else {
 
-document.body.classList.toggle('dark-mode');
+                icon?.classList.replace("fa-sun", "fa-moon");
+                localStorage.setItem("theme", "light");
+            }
+        });
+    }
 
-const icon = themeBtn.querySelector('i');
+    // =========================
+    // NAVBAR EFFECT
+    // =========================
 
-if(document.body.classList.contains('dark-mode')){
-icon.classList.replace('fa-moon','fa-sun');
-}else{
-icon.classList.replace('fa-sun','fa-moon');
-}
+    const navbar = document.querySelector(".navbar");
 
-});
+    window.addEventListener("scroll", () => {
 
+        if (!navbar) return;
 
+        if (window.scrollY > 50) {
 
+            navbar.style.padding = "12px 8%";
+            navbar.style.boxShadow =
+                "0 5px 25px rgba(0,0,0,.15)";
 
+        } else {
 
-};
+            navbar.style.padding = "18px 8%";
+            navbar.style.boxShadow =
+                "0 4px 20px rgba(0,0,0,.08)";
+        }
+    });
 
-// =========================
-// NAVBAR SCROLL EFFECT
-// =========================
+    // =========================
+    // SCROLL TO TOP
+    // =========================
 
-window.addEventListener('scroll', () => {
+    const topBtn = document.createElement("button");
 
-```
-const navbar = document.querySelector('.navbar');
+    topBtn.id = "topBtn";
+    topBtn.innerHTML = "↑";
 
-if(window.scrollY > 50){
-    navbar.style.padding = "12px 8%";
-    navbar.style.boxShadow = "0 5px 25px rgba(0,0,0,0.15)";
-}else{
-    navbar.style.padding = "18px 8%";
-    navbar.style.boxShadow = "none";
-}
-```
+    Object.assign(topBtn.style, {
+        position: "fixed",
+        right: "20px",
+        bottom: "20px",
+        width: "50px",
+        height: "50px",
+        borderRadius: "50%",
+        border: "none",
+        cursor: "pointer",
+        display: "none",
+        fontSize: "22px",
+        zIndex: "999",
+        background: "#1e88e5",
+        color: "#fff"
+    });
 
-});
+    document.body.appendChild(topBtn);
 
-// =========================
-// SCROLL TO TOP BUTTON
-// =========================
+    window.addEventListener("scroll", () => {
+        topBtn.style.display =
+            window.scrollY > 300 ? "block" : "none";
+    });
 
-const topBtn = document.createElement('button');
+    topBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
 
-topBtn.innerHTML = '↑';
+    // =========================
+    // REVEAL ANIMATION
+    // =========================
 
-topBtn.id = "topBtn";
+    const revealElements = document.querySelectorAll(
+        ".stat-card, .card, .featured h2"
+    );
 
-document.body.appendChild(topBtn);
+    revealElements.forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(40px)";
+        el.style.transition = "all .8s ease";
+    });
 
-topBtn.style.position = "fixed";
-topBtn.style.right = "20px";
-topBtn.style.bottom = "20px";
-topBtn.style.width = "50px";
-topBtn.style.height = "50px";
-topBtn.style.borderRadius = "50%";
-topBtn.style.border = "none";
-topBtn.style.cursor = "pointer";
-topBtn.style.display = "none";
-topBtn.style.fontSize = "22px";
-topBtn.style.zIndex = "999";
-topBtn.style.background = "#1e88e5";
-topBtn.style.color = "white";
+    function reveal() {
 
-window.addEventListener('scroll', () => {
+        revealElements.forEach(el => {
 
-```
-if(window.scrollY > 300){
-    topBtn.style.display = "block";
-}else{
-    topBtn.style.display = "none";
-}
-```
+            const top = el.getBoundingClientRect().top;
 
-});
+            if (top < window.innerHeight - 100) {
+                el.style.opacity = "1";
+                el.style.transform = "translateY(0)";
+            }
+        });
+    }
 
-topBtn.addEventListener('click', () => {
+    window.addEventListener("scroll", reveal);
+    reveal();
 
-```
-window.scrollTo({
-    top:0,
-    behavior:'smooth'
-});
-```
+    // =========================
+    // FOOTER YEAR
+    // =========================
 
-});
+    const footerText = document.querySelector("footer p");
 
-// =========================
-// REVEAL ANIMATION
-// =========================
+    if (footerText) {
+        footerText.innerHTML =
+            `© ${new Date().getFullYear()} JNV Chhotaudepur Alumni Network`;
+    }
 
-const revealElements = document.querySelectorAll(
-'.stat-card,.card,.featured h2'
-);
+    // =========================
+    // LIGHTBOX
+    // =========================
 
-function reveal(){
+    const galleryImages =
+        document.querySelectorAll(".gallery-grid img");
 
-```
-revealElements.forEach(el => {
+    const lightbox =
+        document.getElementById("lightbox");
 
-    const windowHeight = window.innerHeight;
-    const top = el.getBoundingClientRect().top;
+    const lightboxImg =
+        document.getElementById("lightboxImg");
 
-    if(top < windowHeight - 100){
+    const closeLightbox =
+        document.getElementById("closeLightbox");
 
-        el.style.opacity = "1";
-        el.style.transform = "translateY(0)";
+    if (
+        galleryImages.length &&
+        lightbox &&
+        lightboxImg &&
+        closeLightbox
+    ) {
 
+        galleryImages.forEach(img => {
+
+            img.addEventListener("click", () => {
+
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeLightbox.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        });
+    }
+
+    // =========================
+    // SCROLL REVEAL
+    // =========================
+
+    if (typeof ScrollReveal !== "undefined") {
+
+        ScrollReveal().reveal(
+            ".hero-content, .card, .stat-card, section",
+            {
+                distance: "60px",
+                duration: 1000,
+                delay: 100,
+                origin: "bottom",
+                reset: false
+            }
+        );
+    }
+
+    // =========================
+    // TS PARTICLES
+    // =========================
+
+    if (
+        typeof tsParticles !== "undefined" &&
+        document.getElementById("tsparticles")
+    ) {
+
+        tsParticles.load("tsparticles", {
+
+            particles: {
+                number: { value: 60 },
+                color: { value: "#3b82f6" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5 },
+                size: { value: 3 },
+
+                move: {
+                    enable: true,
+                    speed: 1
+                },
+
+                links: {
+                    enable: true,
+                    distance: 150,
+                    opacity: 0.4
+                }
+            }
+        });
     }
 
 });
-```
-
-}
-
-revealElements.forEach(el => {
-
-```
-el.style.opacity = "0";
-el.style.transform = "translateY(40px)";
-el.style.transition = "all .8s ease";
-```
-
-});
-
-window.addEventListener('scroll', reveal);
-reveal();
 
 // =========================
 // LOADER
 // =========================
 
-window.addEventListener("load",()=>{
-
-```
-document.body.classList.add("loaded");
-```
-
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
 });
-
-// =========================
-// CURRENT YEAR FOOTER
-// =========================
-
-const footer = document.querySelector("footer p");
-
-if(footer){
-
-
-footer.innerHTML =
-`© ${new Date().getFullYear()} JNV Chhotaudepur Alumni Network`;
-
-
-}
-
-
-const galleryImages =
-document.querySelectorAll('.gallery-grid img');
-
-const lightbox =
-document.getElementById('lightbox');
-
-const lightboxImg =
-document.getElementById('lightboxImg');
-
-const closeLightbox =
-document.getElementById('closeLightbox');
-
-galleryImages.forEach(img=>{
-
-img.addEventListener('click',()=>{
-
-lightbox.style.display='flex';
-lightboxImg.src=img.src;
-
-});
-
-});
-
-closeLightbox.addEventListener('click',()=>{
-
-lightbox.style.display='none';
-
-});
-
-tsParticles.load("tsparticles",{
-particles:{
-number:{value:60},
-size:{value:3},
-move:{enable:true,speed:2},
-links:{enable:true},
-color:{value:"#ffffff"}
-}
-});
-
-
-ScrollReveal().reveal('.hero-content, .card, .stat-card, section', {
-  distance: '60px',
-  duration: 1000,
-  delay: 100,
-  origin: 'bottom',
-  reset: false
-});
-
-tsParticles.load("tsparticles", {
-  particles: {
-    number: { value: 60 },
-    color: { value: "#3b82f6" },
-    shape: { type: "circle" },
-    opacity: { value: 0.5 },
-    size: { value: 3 },
-    move: {
-      enable: true,
-      speed: 1
-    }
-  }
-});
-
-function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("active");
-}
-
 

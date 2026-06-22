@@ -1,192 +1,171 @@
-
-
-<link rel="stylesheet" href="css/style.css">
-<script src="js/script.js"></script>
-
 <!DOCTYPE html>
-
 <html lang="en">
 
-<head> 
-    
-    
-    <script src="https://unpkg.com/scrollreveal"></script>
+<head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>JNV Chhotaudepur Alumni Network</title>
+    <title>JNV Chhotaudepur Alumni Network</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-```
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
 </head>
 
-<body> 
+<body>
 
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
 
-```
-<!-- Navbar -->
+    <!-- Background Particles -->
+    <div id="tsparticles"></div>
 
-<nav class="navbar">
+    <!-- Navbar -->
+    <nav class="navbar">
 
-    
+        <div class="logo">
+            <img src="images/jnv-logo.png" alt="JNV Logo">
+            <span>JNV Alumni</span>
+        </div>
 
-    <div class="logo"> 
         <button class="menu-btn" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-</button>
+            <i class="fas fa-bars"></i>
+        </button>
 
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
 
+        <button id="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
 
-        <img src="images/jnv-logo.png" alt="JNV Logo">
-        <span>JNV Alumni</span>
-    </div>
+    </nav>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="alumni.html">Alumni</a></li>
-        <li><a href="achievements.html">Achievements</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="jobs.html">Jobs</a></li>
-        <li><a href="mentorship.html">Mentorship</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <!-- Hero Section -->
+    <section class="hero">
 
-    <button id="theme-toggle">
-        <i class="fa-solid fa-moon"></i>
-    </button>
+        <div class="hero-content">
 
-</nav>
+            <h1>
+                JNV Chhotaudepur
+                <span>Alumni Network</span>
+            </h1>
 
-<!-- Hero Section -->
+            <p>
+                Connecting Generations • Inspiring Futures • Building Lifelong Connections
+            </p>
 
-<section class="hero">
+            <div class="hero-buttons">
+                <a href="alumni.html" class="btn-primary">Explore Alumni</a>
+                <a href="contact.html" class="btn-secondary">Join Network</a>
+            </div>
 
-    <div class="hero-content">
-
-        <h1>
-            JNV Chhotaudepur
-            <span>Alumni Network</span>
-        </h1>
-
-        <p>
-            Connecting Generations • Inspiring Futures • Building Lifelong Connections
-        </p>
-
-        <div class="hero-buttons">
-            <a href="alumni.html" class="btn-primary">Explore Alumni</a>
-            <a href="contact.html" class="btn-secondary">Join Network</a>
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- Stats -->
+    <section class="stats">
 
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-<div id="tsparticles"></div>
-
-<!-- Stats -->
-
-<section class="stats">
-
-    <div class="stat-card">
-        <h2 class="counter" data-target="5000">24</h2>
-        <p>Alumni</p>
-    </div>
-
-    <div class="stat-card">
-        <h2 class="counter" data-target="150">0</h2>
-        <p>Government Officers</p>
-    </div>
-
-    <div class="stat-card">
-        <h2 class="counter" data-target="1200">0</h2>
-        <p>Engineers</p>
-    </div>
-
-    <div class="stat-card">
-        <h2 class="counter" data-target="500">0</h2>
-        <p>Doctors</p>
-    </div>
-
-</section>
-
-<!-- Featured Alumni -->
-
-<section class="featured">
-
-    <h2>Distinguished Alumni</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <img src="images/alumni1.jpg" alt="">
-            <h3>Alumni Name</h3>
-            <p>IAS Officer</p>
+        <div class="stat-card">
+            <h2 class="counter" data-target="5000">24</h2>
+            <p>Alumni</p>
         </div>
 
-        <div class="card">
-            <img src="images/alumni2.jpg" alt="">
-            <h3>Alumni Name</h3>
-            <p>Software Engineer</p>
+        <div class="stat-card">
+            <h2 class="counter" data-target="150">0</h2>
+            <p>Government Officers</p>
         </div>
 
-        <div class="card">
-            <img src="images/alumni3.jpg" alt="">
-            <h3>Alumni Name</h3>
-            <p>Doctor</p>
+        <div class="stat-card">
+            <h2 class="counter" data-target="1200">0</h2>
+            <p>Engineers</p>
         </div>
 
-    </div>
+        <div class="stat-card">
+            <h2 class="counter" data-target="500">0</h2>
+            <p>Doctors</p>
+        </div>
 
+    </section>
+
+    <!-- Featured Alumni -->
+    <section class="featured">
+
+        <h2>Distinguished Alumni</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="images/alumni1.jpg" alt="Alumni 1">
+                <h3>Alumni Name</h3>
+                <p>IAS Officer</p>
+            </div>
+
+            <div class="card">
+                <img src="images/alumni2.jpg" alt="Alumni 2">
+                <h3>Alumni Name</h3>
+                <p>Software Engineer</p>
+            </div>
+
+            <div class="card">
+                <img src="images/alumni3.jpg" alt="Alumni 3">
+                <h3>Alumni Name</h3>
+                <p>Doctor</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 JNV Chhotaudepur Alumni Network</p>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/6356543488"
+        class="whatsapp-btn"
+        target="_blank">
+
+        <i class="fab fa-whatsapp"></i>
+
+    </a>
+
+    <!-- Menu Toggle -->
     <script>
-function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
-}
-</script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
 
-</section>
+    <!-- TS Particles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
-<!-- Footer -->
-
-<footer>
-
-    <p>
-        © 2026 JNV Chhotaudepur Alumni Network
-    </p>
-
-</footer>
-
-<script src="js/script.js"></script>
-```
-<a
-href="https://wa.me/6356543488"
-class="whatsapp-btn"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
-
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-<div id="tsparticles"></div>
-
-
-<script>
-function toggleMenu(){
-    document.querySelector('.nav-links').classList.toggle('active');
-}
-</script>
+    <!-- Main JS -->
+    <script src="js/script.js"></script>
 
 </body>
-
 </html>
