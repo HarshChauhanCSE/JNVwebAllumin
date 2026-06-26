@@ -1,35 +1,32 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Achievements | JNV Chhotaudepur Alumni Network</title>
 
-    <link rel="stylesheet" href="css/style.css">
-
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <!-- Navbar -->
-
     <nav class="navbar">
-
         <div class="logo">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
             <img src="images/jnv-logo.png" alt="JNV Logo">
             <span>JNV Alumni</span>
         </div>
-
-        <button class="menu-btn" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </button>
 
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -38,208 +35,174 @@
             <li><a href="achievements.html" class="active">Achievements</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="events.html">Events</a></li>
+        
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
         <button id="theme-toggle">
             <i class="fa-solid fa-moon"></i>
         </button>
-
     </nav>
 
     <!-- Hero -->
-
     <section class="hero">
-
         <div class="hero-content">
-
-            <h1>Achievements & Hall of Fame</h1>
-
-            <p>
-                Celebrating excellence, leadership, innovation,
-                and success of JNV Chhotaudepur students and alumni.
-            </p>
-
+            <h1>Achievements & <span>Hall of Fame</span></h1>
+            <p>Celebrating excellence, leadership, innovation,
+            and success of JNV Chhotaudepur students and alumni.</p>
         </div>
-
     </section>
 
     <!-- Achievement Stats -->
-
     <section class="stats">
-
         <div class="stat-card">
-            <h2>0</h2>
+            <h2 class="counter" data-target="150">0</h2>
             <p>Government Officers</p>
         </div>
-
         <div class="stat-card">
-            <h2>0</h2>
+            <h2 class="counter" data-target="1200">0</h2>
             <p>Engineers</p>
         </div>
-
         <div class="stat-card">
-            <h2>0</h2>
+            <h2 class="counter" data-target="500">0</h2>
             <p>Doctors</p>
         </div>
-
         <div class="stat-card">
-            <h2>0</h2>
+            <h2 class="counter" data-target="200">0</h2>
             <p>Entrepreneurs</p>
         </div>
-
     </section>
 
     <!-- Hall of Fame -->
-
     <section class="featured">
-
         <h2>Hall of Fame</h2>
-
         <div class="cards">
-
             <div class="card">
-                <i class="fa-solid fa-award fa-3x"></i>
+                <i class="fa-solid fa-award fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>UPSC Achievers</h3>
-                <p>-----------</p>
+                <p>Alumni who cleared one of India's toughest exams and serve the nation.</p>
             </div>
-
             <div class="card">
-                <i class="fa-solid fa-building-columns fa-3x"></i>
+                <i class="fa-solid fa-building-columns fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>GPSC Officers</h3>
-                <p>-----------</p>
+                <p>Gujarat state civil service officers from our alumni network.</p>
             </div>
-
             <div class="card">
-                <i class="fa-solid fa-graduation-cap fa-3x"></i>
+                <i class="fa-solid fa-graduation-cap fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>IIT & NIT Alumni</h3>
-                <p>-----------</p>
+                <p>Engineers shaping the future through premier technical institutions.</p>
             </div>
-
         </div>
-
     </section>
 
     <!-- Academic Excellence -->
-
     <section class="featured">
-
         <h2>Academic Excellence</h2>
-
         <div class="cards">
-
             <div class="card">
-                <h3>Board Examination Toppers</h3>
-                <p>Consistently excellent academic performance.</p>
+                <i class="fa-solid fa-trophy fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
+                <h3>Board Toppers</h3>
+                <p>Consistently excellent academic performance in board examinations.</p>
             </div>
-
             <div class="card">
+                <i class="fa-solid fa-star fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>Scholarship Winners</h3>
                 <p>National and state level scholarship achievers.</p>
             </div>
-
             <div class="card">
+                <i class="fa-solid fa-flask fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>Research Excellence</h3>
-                <p>Students contributing to innovation and research.</p>
+                <p>Students contributing to innovation and research across fields.</p>
             </div>
-
         </div>
-
     </section>
 
     <!-- Sports Achievements -->
-
     <section class="featured">
-
         <h2>Sports Achievements</h2>
-
         <div class="cards">
-
             <div class="card">
-                <i class="fa-solid fa-futbol fa-3x"></i>
+                <i class="fa-solid fa-futbol fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>Football</h3>
-                <p>National Level participation.</p>
+                <p>National level participation and outstanding team performance.</p>
             </div>
-
             <div class="card">
-                <i class="fa-solid fa-volleyball fa-3x"></i>
+                <!-- fa-volleyball nahi hota — correct icon use kiya -->
+                <i class="fa-solid fa-baseball fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>Volleyball</h3>
-                <p>National level representation.</p>
+                <p>National level representation and medals.</p>
             </div>
-
             <div class="card">
-                <i class="fa-solid fa-medal fa-3x"></i>
+                <i class="fa-solid fa-medal fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>Athletics</h3>
-                <p>Outstanding performance in competitions.</p>
+                <p>Outstanding performance in state and national competitions.</p>
             </div>
-
         </div>
-
     </section>
 
-    <!-- Innovation -->
-
+    <!-- Innovation & Leadership -->
     <section class="featured">
-
         <h2>Innovation & Leadership</h2>
-
         <div class="cards">
-
             <div class="card">
+                <i class="fa-solid fa-rocket fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>Startups</h3>
-                <p>Alumni-led businesses and innovative ventures.</p>
+                <p>Alumni-led businesses and innovative ventures creating jobs.</p>
             </div>
-
             <div class="card">
+                <i class="fa-solid fa-microchip fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>Technology</h3>
-                <p>Contributions in software, cybersecurity and AI.</p>
+                <p>Contributions in software, cybersecurity and artificial intelligence.</p>
             </div>
-
             <div class="card">
+                <i class="fa-solid fa-hands-holding-circle fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>Community Impact</h3>
-                <p>Leadership initiatives creating positive change.</p>
+                <p>Leadership initiatives creating positive change in society.</p>
             </div>
-
         </div>
-
     </section>
 
-    <!-- Achievement Timeline -->
-
+    <!-- Journey of Excellence -->
     <section class="featured">
-
         <h2>Journey of Excellence</h2>
-
         <div class="cards">
-
             <div class="card">
+                <i class="fa-solid fa-flag fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>Foundation Years</h3>
-                <p>Building strong educational values.</p>
+                <p>Building strong educational values and character.</p>
             </div>
-
             <div class="card">
+                <i class="fa-solid fa-chart-line fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>Growth Phase</h3>
-                <p>Academic and extracurricular expansion.</p>
+                <p>Academic and extracurricular expansion across decades.</p>
             </div>
-
             <div class="card">
+                <i class="fa-solid fa-globe fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
                 <h3>Global Recognition</h3>
-                <p>Alumni impacting society worldwide.</p>
+                <p>Alumni impacting society and communities worldwide.</p>
             </div>
-
         </div>
-
     </section>
 
     <!-- Footer -->
-
     <footer>
         <p>© 2026 JNV Chhotaudepur Alumni Network</p>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6356543488" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
     <script src="js/script.js"></script>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
 
 </body>
 
 </html>
-```

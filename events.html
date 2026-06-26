@@ -1,217 +1,229 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | JNV Chhotaudepur Alumni Network</title>
 
-<title>Events | JNV Chhotaudepur Alumni Network</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<nav class="navbar">
-
-<div class="logo">
-<img src="images/jnv-logo.png" alt="">
-<span>JNV Alumni</span>
-</div>
-
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="alumni.html">Alumni</a></li>
-<li><a href="achievements.html">Achievements</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="events.html">Events</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-
-</nav>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>Alumni Events</h1>
-
-<p>
-Stay connected through reunions, networking events,
-career sessions and alumni meets.
-</p>
-
-</div>
-
-</section>
-
-<!-- Countdown -->
-
-<section class="featured">
-
-<h2>Annual Alumni Meet 2026</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3 id="days">00</h3>
-<p>Days</p>
-</div>
-
-<div class="card">
-<h3 id="hours">00</h3>
-<p>Hours</p>
-</div>
-
-<div class="card">
-<h3 id="minutes">00</h3>
-<p>Minutes</p>
-</div>
-
-<div class="card">
-<h3 id="seconds">00</h3>
-<p>Seconds</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- Upcoming Events -->
-
-<section class="featured">
-
-<h2>Upcoming Events</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Annual Alumni Meet</h3>
-<p>15 August 2026</p>
-<p>JNV Chhotaudepur Campus</p>
-</div>
-
-<div class="card">
-<h3>Career Guidance Session</h3>
-<p>---</p>
-<p>Online Webinar</p>
-</div>
-
-<div class="card">
-<h3>Entrepreneurship Summit</h3>
-<p>---</p>
-<p>Ahmedabad</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- Registration -->
-
-<section class="featured">
-
-<h2>Event Registration</h2>
-
-<form style="max-width:700px;margin:auto;">
-
-<input
-type="text"
-placeholder="Full Name"
-style="width:100%;padding:15px;margin:10px 0;border-radius:10px;border:1px solid #ddd;">
-
-<input
-type="email"
-placeholder="Email Address"
-style="width:100%;padding:15px;margin:10px 0;border-radius:10px;border:1px solid #ddd;">
-
-<input
-type="text"
-placeholder="Batch"
-style="width:100%;padding:15px;margin:10px 0;border-radius:10px;border:1px solid #ddd;">
-
-<button class="btn-primary">
-Register Now
-</button>
-
-</form>
-
-</section>
-
-<!-- Previous Events -->
-
-<section class="featured">
-
-<h2>Past Events</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Alumni Meet 2025</h3>
-<p>Successful gathering of former students.</p>
-</div>
-
-<div class="card">
-<h3>Career Connect 2025</h3>
-<p>Mentorship and placement guidance session.</p>
-</div>
-
-<div class="card">
-<h3>Leadership Summit</h3>
-<p>Leadership and innovation focused event.</p>
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>
-© 2026 JNV Chhotaudepur Alumni Network
-</p>
-
-</footer>
-
-<script src="js/script.js"></script>
-
-<script>
-
-// const targetDate =
-// new Date("August 15, 2026 09:00:00").getTime();
-
-// setInterval(() => {
-
-// const now = new Date().getTime();
-
-// const distance = targetDate - now;
-
-// const days =
-// Math.floor(distance/(1000*60*60*24));
-
-// const hours =
-// Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-
-// const minutes =
-// Math.floor((distance%(1000*60*60))/(1000*60));
-
-// const seconds =
-// Math.floor((distance%(1000*60))/1000);
-
-// document.getElementById("days").innerHTML = days;
-// document.getElementById("hours").innerHTML = hours;
-// document.getElementById("minutes").innerHTML = minutes;
-// document.getElementById("seconds").innerHTML = seconds;
-
-// },1000);
-
-// </script>
-
-// </body>
-// </html>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <img src="images/jnv-logo.png" alt="JNV Logo">
+            <span>JNV Alumni</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html" class="active">Events</a></li>
+           
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Alumni <span>Events</span></h1>
+            <p>Stay connected through reunions, networking events,
+            career sessions and alumni meets.</p>
+        </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="featured">
+        <h2>Annual Alumni Meet 2026</h2>
+        <p class="section-desc">Countdown to our biggest event of the year!</p>
+        <div class="cards countdown-cards">
+            <div class="card countdown-card">
+                <h3 id="days">00</h3>
+                <p>Days</p>
+            </div>
+            <div class="card countdown-card">
+                <h3 id="hours">00</h3>
+                <p>Hours</p>
+            </div>
+            <div class="card countdown-card">
+                <h3 id="minutes">00</h3>
+                <p>Minutes</p>
+            </div>
+            <div class="card countdown-card">
+                <h3 id="seconds">00</h3>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="featured">
+        <h2>Upcoming Events</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fa-solid fa-calendar-check fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
+                <h3>Annual Alumni Meet</h3>
+                <p><i class="fa-solid fa-clock"></i> 15 August 2026</p>
+                <p><i class="fa-solid fa-location-dot"></i> JNV Chhotaudepur Campus</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-video fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
+                <h3>Career Guidance Session</h3>
+                <p><i class="fa-solid fa-clock"></i> Coming Soon</p>
+                <p><i class="fa-solid fa-wifi"></i> Online Webinar</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-rocket fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
+                <h3>Entrepreneurship Summit</h3>
+                <p><i class="fa-solid fa-clock"></i> Coming Soon</p>
+                <p><i class="fa-solid fa-location-dot"></i> Ahmedabad</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Registration -->
+    <section class="featured">
+        <h2>Event Registration</h2>
+        <form id="eventForm" class="contact-form" novalidate>
+            <div class="form-group">
+                <label for="eventName">
+                    <i class="fa-solid fa-user"></i> Full Name <span class="required">*</span>
+                </label>
+                <input type="text" id="eventName" placeholder="Aapka pura naam" required>
+            </div>
+            <div class="form-group">
+                <label for="eventEmail">
+                    <i class="fa-solid fa-envelope"></i> Email Address <span class="required">*</span>
+                </label>
+                <input type="email" id="eventEmail" placeholder="aap@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="eventBatch">
+                    <i class="fa-solid fa-calendar-days"></i> Batch Year <span class="required">*</span>
+                </label>
+                <input type="text" id="eventBatch" placeholder="e.g. 2015" required>
+            </div>
+            <div class="form-group">
+                <label for="eventSelect">
+                    <i class="fa-solid fa-calendar-check"></i> Select Event
+                </label>
+                <select id="eventSelect">
+                    <option value="">-- Select Event --</option>
+                    <option value="alumni-meet">Annual Alumni Meet 2026</option>
+                    <option value="career-session">Career Guidance Session</option>
+                    <option value="summit">Entrepreneurship Summit</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-submit">
+                <i class="fa-solid fa-paper-plane"></i> Register Now
+            </button>
+        </form>
+    </section>
+
+    <!-- Past Events -->
+    <section class="featured">
+        <h2>Past Events</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fa-solid fa-flag-checkered fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
+                <h3>Alumni Meet 2025</h3>
+                <p>Successful gathering of former students and family.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-handshake fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
+                <h3>Career Connect 2025</h3>
+                <p>Mentorship and placement guidance session.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-star fa-3x" style="color:var(--secondary); margin-bottom:15px;"></i>
+                <h3>Leadership Summit</h3>
+                <p>Leadership and innovation focused event.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 JNV Chhotaudepur Alumni Network</p>
+    </footer>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/6356543488" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // Countdown Timer
+        const targetDate = new Date("August 15, 2026 09:00:00").getTime();
+
+        function updateCountdown() {
+            const now      = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance <= 0) {
+                document.getElementById("days").textContent    = "00";
+                document.getElementById("hours").textContent   = "00";
+                document.getElementById("minutes").textContent = "00";
+                document.getElementById("seconds").textContent = "00";
+                return;
+            }
+
+            document.getElementById("days").textContent    = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, "0");
+            document.getElementById("hours").textContent   = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, "0");
+            document.getElementById("minutes").textContent = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, "0");
+            document.getElementById("seconds").textContent = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, "0");
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Event Registration Form
+        document.getElementById("eventForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name  = document.getElementById("eventName").value.trim();
+            const email = document.getElementById("eventEmail").value.trim();
+            const batch = document.getElementById("eventBatch").value.trim();
+
+            if (!name || !email || !batch) {
+                // Use script.js showToast if available, else fallback
+                if (typeof showToast === "function") {
+                    showToast("Sab required fields bharo.", "warning");
+                } else {
+                    alert("Please fill all required fields.");
+                }
+                return;
+            }
+
+            if (typeof showToast === "function") {
+                showToast("Registration successful! ✔ Hum aapse contact karenge.", "success");
+            } else {
+                alert("Registration submitted successfully!");
+            }
+
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>

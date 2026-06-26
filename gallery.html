@@ -1,105 +1,143 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | JNV Chhotaudepur Alumni Network</title>
 
-<title>Gallery | JNV Chhotaudepur Alumni Network</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<nav class="navbar">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <img src="images/jnv-logo.png" alt="JNV Logo">
+            <span>JNV Alumni</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </nav>
 
-<div class="logo">
-<img src="images/jnv-logo.png" alt="">
-<span>JNV Alumni</span>
-</div>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Photo <span>Gallery</span></h1>
+            <p>Memories, Events, Achievements and Alumni Moments</p>
+        </div>
+    </section>
 
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="alumni.html">Alumni</a></li>
-<li><a href="achievements.html">Achievements</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="events.html">Events</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+    <!-- Gallery -->
+    <section class="featured">
+        <h2>Campus Memories</h2>
+        <div class="gallery-grid">
+            <!-- loading="lazy" — browser sirf visible images load karega, fast page load -->
+            <img src="images/photo1.jpg"  alt="Campus Memory 1"  loading="lazy">
+            <img src="images/photo2.jpg"  alt="Campus Memory 2"  loading="lazy">
+            <img src="images/photo3.jpg"  alt="Campus Memory 3"  loading="lazy">
+            <img src="images/photo4.jpg"  alt="Campus Memory 4"  loading="lazy">
+            <img src="images/photo5.jpg"  alt="Campus Memory 5"  loading="lazy">
+            <img src="images/photo6.jpg"  alt="Campus Memory 6"  loading="lazy">
+            <img src="images/photo7.jpg"  alt="Campus Memory 7"  loading="lazy">
+            <img src="images/photo8.jpg"  alt="Campus Memory 8"  loading="lazy">
+            <img src="images/photo9.jpg"  alt="Campus Memory 9"  loading="lazy">
+            <img src="images/photo10.jpg" alt="Campus Memory 10" loading="lazy">
+            <img src="images/photo11.jpg" alt="Campus Memory 11" loading="lazy">
+            <img src="images/photo12.jpg" alt="Campus Memory 12" loading="lazy">
+            <img src="images/photo13.jpg" alt="Campus Memory 13" loading="lazy">
+            <img src="images/photo14.jpg" alt="Campus Memory 14" loading="lazy">
+            <img src="images/photo15.jpg" alt="Campus Memory 15" loading="lazy">
+            <img src="images/photo16.jpg" alt="Campus Memory 16" loading="lazy">
+            <img src="images/photo17.jpg" alt="Campus Memory 17" loading="lazy">
+            <img src="images/photo18.jpg" alt="Campus Memory 18" loading="lazy">
+            <img src="images/photo19.jpg" alt="Campus Memory 19" loading="lazy">
+            <img src="images/photo20.jpg" alt="Campus Memory 20" loading="lazy">
+            <img src="images/photo21.jpg" alt="Campus Memory 21" loading="lazy">
+            <img src="images/photo22.jpg" alt="Campus Memory 22" loading="lazy">
+            <img src="images/photo23.jpg" alt="Campus Memory 23" loading="lazy">
+            <img src="images/photo24.jpg" alt="Campus Memory 24" loading="lazy">
+            <img src="images/photo25.jpg" alt="Campus Memory 25" loading="lazy">
+            <img src="images/photo26.jpg" alt="Campus Memory 26" loading="lazy">
+            <img src="images/photo27.jpg" alt="Campus Memory 27" loading="lazy">
+            <img src="images/photo28.jpg" alt="Campus Memory 28" loading="lazy">
+            <img src="images/photo29.jpg" alt="Campus Memory 29" loading="lazy">
+            <img src="images/photo30.jpg" alt="Campus Memory 30" loading="lazy">
+            <img src="images/photo31.jpg" alt="Campus Memory 31" loading="lazy">
+            <img src="images/photo32.jpg" alt="Campus Memory 32" loading="lazy">
+            <img src="images/photo33jpg" alt="Campus Memory 33" loading="lazy">
+            <img src="images/photo34jpg" alt="Campus Memory 34" loading="lazy">
+            <img src="images/photo35jpg" alt="Campus Memory 35" loading="lazy">
+            <img src="images/photo36jpg" alt="Campus Memory 36" loading="lazy">
+            <img src="images/photo37jpg" alt="Campus Memory 37" loading="lazy">
+            <img src="images/photo38jpg" alt="Campus Memory 38" loading="lazy">
+            <img src="images/photo39.jpg" alt="Campus Memory 39" loading="lazy">
+            <img src="images/photo40.jpg" alt="Campus Memory 40" loading="lazy">
+            <img src="images/photo41.jpg" alt="Campus Memory 41" loading="lazy">
+            <img src="images/photo42.jpg" alt="Campus Memory 42" loading="lazy">
+            <img src="images/photo43.jpg" alt="Campus Memory 43" loading="lazy">
+            <img src="images/photo44.jpg" alt="Campus Memory 44" loading="lazy">
+            <img src="images/photo45.jpg" alt="Campus Memory 45" loading="lazy">
+            <img src="images/photo46.jpg" alt="Campus Memory 46" loading="lazy">
+            <img src="images/photo47.jpg" alt="Campus Memory 47" loading="lazy">
+            <img src="images/photo48.jpg" alt="Campus Memory 48" loading="lazy">
+            <img src="images/photo49.jpg" alt="Campus Memory 49" loading="lazy">
+            <img src="images/photo50.jpg" alt="Campus Memory 50" loading="lazy">
+            <img src="images/photo51.jpg" alt="Campus Memory 51" loading="lazy">
+            <img src="images/photo52.jpg" alt="Campus Memory 52" loading="lazy">
+            <img src="images/photo53.jpg" alt="Campus Memory 53" loading="lazy">
+            <img src="images/photo54.jpg" alt="Campus Memory 54" loading="lazy">
+            <img src="images/photo55.jpg" alt="Campus Memory 55" loading="lazy">
+            <img src="images/photo56.jpg" alt="Campus Memory 56" loading="lazy">
+            <img src="images/photo56.jpg" alt="Campus Memory 57" loading="lazy">
+            <img src="images/photo57.jpg" alt="Campus Memory 58" loading="lazy">
+            <img src="images/photo58.jpg" alt="Campus Memory 59" loading="lazy">
+            <img src="images/photo59.jpg" alt="Campus Memory 60" loading="lazy">
+            <img src="images/photo60.jpg" alt="Campus Memory 60" loading="lazy">
 
-</nav>
+        </div>
+    </section>
 
-<section class="hero">
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <span id="closeLightbox">&times;</span>
+        <img id="lightboxImg" src="" alt="Preview">
+    </div>
 
-<div class="hero-content">
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 JNV Chhotaudepur Alumni Network</p>
+    </footer>
 
-<h1>Photo Gallery</h1>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/6356543488" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<p>
-Memories, Events, Achievements and Alumni Moments.
-</p>
+    <script src="js/script.js"></script>
 
-</div>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
 
-</section>
-
-<section class="featured">
-
-<h2>Campus Memories</h2>
-
-<div class="gallery-grid">
-
-<img src="images/photo1.jpg">
-<img src="images/photo2.jpg">
-<img src="images/photo3.jpg">
-<img src="images/photo4.jpg">
-<img src="images/photo5.jpg">
-<img src="images/photo6.jpg">
-<img src="images/photo7.jpg">
-<img src="images/photo8.jpg">
-<img src="images/photo9.jpg">
-<img src="images/photo10.jpg">
-<img src="images/photo11.jpg">
-<img src="images/photo12.jpg">
-<img src="images/photo13.jpg">
-<img src="images/photo14.jpg">
-<img src="images/photo15.jpg">
-<img src="images/photo16.jpg">
-<img src="images/photo17.jpg">
-<img src="images/photo18.jpg">
-<img src="images/photo19.jpg">
-<img src="images/photo20.jpg">
-<img src="images/photo21.jpg">
-<img src="images/photo22.jpg">
-<img src="images/photo23.jpg">
-<img src="images/photo24.jpg">
-<img src="images/photo25.jpg">
-<img src="images/photo26.jpg">
-<img src="images/photo27.jpg">
-<img src="images/photo28.jpg">
-<img src="images/photo29.jpg">
-<img src="images/photo30.jpg">
-<img src="images/photo31.jpg">
-<img src="images/photo32.jpg">
-
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 JNV Chhotaudepur Alumni Network</p>
-</footer>
-
-<script src="js/script.js"></script>
-
-<div id="lightbox">
-    <span id="closeLightbox">&times;</span>
-    <img id="lightboxImg">
-</div>
+</body>
+</html>

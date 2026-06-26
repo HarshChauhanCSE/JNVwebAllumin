@@ -1,124 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | JNV Chhotaudepur Alumni Network</title>
 
-<title>Contact Us | JNV Chhotaudepur Alumni Network</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<nav class="navbar">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <img src="images/jnv-logo.png" alt="JNV Logo">
+            <span>JNV Alumni</span>
+        </div>
 
-<div class="logo">
-<img src="images/jnv-logo.png" alt="">
-<span>JNV Alumni</span>
-</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+        
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
 
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="alumni.html">Alumni</a></li>
-<li><a href="achievements.html">Achievements</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="events.html">Events</a></li>
-<li><a href="jobs.html">Jobs</a></li>
-<li><a href="mentorship.html">Mentorship</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+        <button id="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </nav>
 
-</nav>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact <span>Us</span></h1>
+            <p>Connect with the JNV Chhotaudepur Alumni Association.</p>
+        </div>
+    </section>
 
-<section class="hero">
+    <!-- Contact Form -->
+    <section class="featured">
+        <h2>Get In Touch</h2>
 
-<div class="hero-content">
+        <form id="contactForm" class="contact-form" novalidate>
 
-<h1>Contact Us</h1>
+            <div class="form-group">
+                <label for="contactName">
+                    <i class="fa-solid fa-user"></i> Full Name <span class="required">*</span>
+                </label>
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Aapka pura naam"
+                    required>
+            </div>
 
-<p>
-Connect with the JNV Chhotaudepur Alumni Association.
-</p>
+            <div class="form-group">
+                <label for="contactEmail">
+                    <i class="fa-solid fa-envelope"></i> Email Address <span class="required">*</span>
+                </label>
+                <input
+                    type="email"
+                    id="contactEmail"
+                    placeholder="aap@example.com"
+                    required>
+            </div>
 
-</div>
+            <div class="form-group">
+                <label for="contactBatch">
+                    <i class="fa-solid fa-calendar-days"></i> Batch Year
+                </label>
+                <input
+                    type="text"
+                    id="contactBatch"
+                    placeholder="e.g. 2015">
+            </div>
 
-</section>
+            <div class="form-group">
+                <label for="contactMessage">
+                    <i class="fa-solid fa-message"></i> Your Message <span class="required">*</span>
+                </label>
+                <textarea
+                    id="contactMessage"
+                    placeholder="Apna message likhein..."
+                    required></textarea>
+            </div>
 
-<section class="featured">
+            <button type="submit" class="btn-submit">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
 
-<h2>Get In Touch</h2>
+        </form>
+    </section>
 
-<form style="max-width:800px;margin:auto;">
+    <!-- Contact Info Cards -->
+    <section class="stats">
+        <div class="stat-card">
+            <i class="fa-solid fa-envelope fa-3x" style="color:var(--secondary);"></i>
+            <h3>Email</h3>
+            <p>alumni@jnvchhotaudepur.org</p>
+        </div>
+        <div class="stat-card">
+            <i class="fa-solid fa-phone fa-3x" style="color:var(--secondary);"></i>
+            <h3>Phone</h3>
+            <p>+91 XXXXX XXXXX</p>
+        </div>
+        <div class="stat-card">
+            <i class="fa-solid fa-location-dot fa-3x" style="color:var(--secondary);"></i>
+            <h3>Address</h3>
+            <p>JNV Chhotaudepur, Gujarat</p>
+        </div>
+    </section>
 
-<input
-type="text"
-placeholder="Full Name"
-style="width:100%;padding:15px;margin:10px 0;border-radius:12px;border:1px solid #ddd;">
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 JNV Chhotaudepur Alumni Network</p>
+    </footer>
 
-<input
-type="email"
-placeholder="Email Address"
-style="width:100%;padding:15px;margin:10px 0;border-radius:12px;border:1px solid #ddd;">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6356543488" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<input
-type="text"
-placeholder="Batch Year"
-style="width:100%;padding:15px;margin:10px 0;border-radius:12px;border:1px solid #ddd;">
+    <!-- Firebase SDKs (app.js se pehle load karna zaroori hai) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
 
-<textarea
-placeholder="Your Message"
-style="width:100%;height:180px;padding:15px;margin:10px 0;border-radius:12px;border:1px solid #ddd;">
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
 
-</textarea>
-
-<button class="btn-primary">
-Send Message
-</button>
-
-</form>
-
-</section>
-
-<section class="stats">
-
-<div class="stat-card">
-<i class="fa-solid fa-envelope fa-3x"></i>
-<h3>Email</h3>
-<p>alumni@jnvchhotaudepur.org</p>
-</div>
-
-<div class="stat-card">
-<i class="fa-solid fa-phone fa-3x"></i>
-<h3>Phone</h3>
-<p>+91 XXXXX XXXXX</p>
-</div>
-
-<div class="stat-card">
-<i class="fa-solid fa-location-dot fa-3x"></i>
-<h3>Address</h3>
-<p>JNV Chhotaudepur, Gujarat</p>
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 JNV Chhotaudepur Alumni Network</p>
-</footer>
-
-<script src="js/script.js"></script>
-<script src="app.js"></script>
-
-<button onclick="sendMessage()"></button>
-
-
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
 
 </body>
+
 </html>

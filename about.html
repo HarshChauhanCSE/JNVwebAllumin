@@ -1,37 +1,32 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>About | JNV Chhotaudepur Alumni Network</title>
 
-    <link rel="stylesheet" href="css/style.css">
-
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
-
+    <!-- Navbar (same as index.html) -->
     <nav class="navbar">
-
         <div class="logo">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
             <img src="images/jnv-logo.png" alt="JNV Logo">
             <span>JNV Alumni</span>
         </div>
-
-        <button class="menu-btn" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </button>
 
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -40,157 +35,130 @@
             <li><a href="achievements.html">Achievements</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="events.html">Events</a></li>
+           
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
         <button id="theme-toggle">
             <i class="fa-solid fa-moon"></i>
         </button>
-
     </nav>
 
     <!-- Hero -->
-
     <section class="hero">
-
         <div class="hero-content">
-
-            <h1>About JNV Chhotaudepur</h1>
-
-            <p>
-                Excellence in Education, Leadership and Character Building.
-            </p>
-
+            <h1>About <span>JNV Chhotaudepur</span></h1>
+            <p>Excellence in Education, Leadership and Character Building.</p>
         </div>
-
     </section>
 
     <!-- Legacy -->
-
     <section class="featured">
-
         <h2>Our Legacy</h2>
-
-        <p style="max-width:1000px;margin:auto;text-align:center;line-height:2;">
+        <p class="section-desc">
             Jawahar Navodaya Vidyalaya Chhotaudepur is part of the prestigious
             Navodaya Vidyalaya system established to provide quality education
             to talented rural students. Over the years, the school has produced
             successful professionals, officers, scientists, doctors, engineers,
             entrepreneurs and leaders who contribute significantly to society.
         </p>
-
     </section>
 
-    <!-- Vision Mission -->
-
+    <!-- Vision Mission Excellence -->
     <section class="stats">
-
         <div class="stat-card">
             <i class="fa-solid fa-eye fa-3x"></i>
             <h3>Vision</h3>
-            <p>
-                To empower students through excellence in education and values.
-            </p>
+            <p>To empower students through excellence in education and values.</p>
         </div>
-
         <div class="stat-card">
             <i class="fa-solid fa-bullseye fa-3x"></i>
             <h3>Mission</h3>
-            <p>
-                To nurture talent and develop future leaders of the nation.
-            </p>
+            <p>To nurture talent and develop future leaders of the nation.</p>
         </div>
-
         <div class="stat-card">
             <i class="fa-solid fa-award fa-3x"></i>
             <h3>Excellence</h3>
-            <p>
-                Promoting academic, cultural and sports achievements.
-            </p>
+            <p>Promoting academic, cultural and sports achievements.</p>
         </div>
-
     </section>
 
-    <!-- Principal Message -->
-
+    <!-- Principal's Message -->
     <section class="featured">
-
         <h2>Principal's Message</h2>
-
-        <div class="card" style="padding:30px;">
-
-            <p>
-                Coming Soon!
-            </p>
-
+        <div class="cards">
+            <div class="card principal-card">
+                <i class="fa-solid fa-user-tie fa-3x" style="margin-bottom:15px; color: var(--primary);"></i>
+                <h3>From the Principal's Desk</h3>
+                <p>Coming Soon!</p>
+            </div>
         </div>
-
     </section>
 
     <!-- Campus Highlights -->
-
     <section class="featured">
-
         <h2>Campus Highlights</h2>
-
         <div class="cards">
-
             <div class="card">
+                <i class="fa-solid fa-chalkboard-teacher fa-2x" style="margin-bottom:10px; color: var(--primary);"></i>
                 <h3>Smart Classrooms</h3>
                 <p>Modern technology-enabled learning environment.</p>
             </div>
-
             <div class="card">
+                <i class="fa-solid fa-book-open fa-2x" style="margin-bottom:10px; color: var(--primary);"></i>
                 <h3>Library</h3>
                 <p>Extensive academic and reference resources.</p>
             </div>
-
             <div class="card">
+                <i class="fa-solid fa-futbol fa-2x" style="margin-bottom:10px; color: var(--primary);"></i>
                 <h3>Sports Facilities</h3>
                 <p>Comprehensive facilities for holistic development.</p>
             </div>
-
         </div>
-
     </section>
 
-    <!-- Timeline -->
-
+    <!-- Journey Timeline -->
     <section class="featured">
-
         <h2>Journey Timeline</h2>
-
         <div class="cards">
-
             <div class="card">
+                <i class="fa-solid fa-flag fa-2x" style="margin-bottom:10px; color: var(--primary);"></i>
                 <h3>Establishment</h3>
                 <p>Foundation of JNV Chhotaudepur.</p>
             </div>
-
             <div class="card">
+                <i class="fa-solid fa-chart-line fa-2x" style="margin-bottom:10px; color: var(--primary);"></i>
                 <h3>Academic Growth</h3>
                 <p>Outstanding achievements in academics.</p>
             </div>
-
             <div class="card">
+                <i class="fa-solid fa-globe fa-2x" style="margin-bottom:10px; color: var(--primary);"></i>
                 <h3>Global Alumni</h3>
                 <p>Alumni making impact worldwide.</p>
             </div>
-
         </div>
-
     </section>
 
     <!-- Footer -->
-
     <footer>
         <p>© 2026 JNV Chhotaudepur Alumni Network</p>
     </footer>
 
-    <!-- Main JS -->
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6356543488" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollreveal" defer></script>
     <script src="js/script.js"></script>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
 
 </body>
 
 </html>
-```
