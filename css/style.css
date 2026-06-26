@@ -159,7 +159,7 @@ ul {
 ========================= */
 
 .hero {
-    min-height: 100svh; /* svh = safe viewport height (mobile bar aware) */
+    min-height: 100vh; /* svh = safe viewport height (mobile bar aware) */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1029,3 +1029,9 @@ body.dark-mode .form-group textarea::placeholder {
   box-shadow: 0 0 20px rgba(0,255,204,0.3);
 }
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
